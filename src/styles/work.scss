@@ -97,3 +97,17 @@
         }
     }
 }
+
+@media (max-width: 800px) {
+    .workItem {
+
+        > aside {
+            > h3 {
+                font-size: 1rem;
+            }
+            > p {
+                display: none;
+            }
+        }
+    }
+}

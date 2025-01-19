@@ -9,21 +9,20 @@ import { Toaster } from "react-hot-toast";
 import { useState } from "react";
 
 function App() {
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  const [menuOpen,setMenuOpen] =useState(false);
-
-  return(
+  return (
     <>
-    <HeaderPhone menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
-  <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
-  <Home />
-  <Work/>
-  <Timeline/>
-  <Services/>
-  <Footer/>
-  <Toaster/>
-  </>
-  )
+      <HeaderPhone menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+      <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+      <Home />
+      <Work />
+      <Timeline />
+      <Services />
+      <Footer />
+      <Toaster />
+    </>
+  );
 }
 
 export default App;

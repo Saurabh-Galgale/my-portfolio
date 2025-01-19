@@ -45,8 +45,14 @@ const Work = () => {
               ))}
             </Carousel>
             <div className="carousel-controls">
-              <FaChevronLeft className="carousel-arrow left-arrow" onClick={handlePrev} />
-              <FaChevronRight className="carousel-arrow right-arrow" onClick={handleNext} />
+              <FaChevronLeft
+                className="carousel-arrow left-arrow"
+                onClick={handlePrev}
+              />
+              <FaChevronRight
+                className="carousel-arrow right-arrow"
+                onClick={handleNext}
+              />
             </div>
           </div>
         </article>

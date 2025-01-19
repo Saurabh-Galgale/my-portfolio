@@ -2,10 +2,9 @@ import React from "react";
 import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
 import { BsChevronDown } from "react-icons/bs";
-import me from "../assets/saurabh.png";
+import me from "../assets/homeImg01.png";
 
 const Home = () => {
-
   const animations = {
     h1: {
       initial: {
@@ -37,18 +36,29 @@ const Home = () => {
             Hi, I am <br /> Saurabh Galgale
           </motion.h1>
 
-<ul className="description-list">
-  <li>Proficient in debugging and resolving complex technical issues efficiently.</li>
-  <li>Experienced React front-end developer with a strong focus on user-centric design.</li>
-  <li>Deep understanding of advanced JavaScript concepts and modern development practices.</li>
-  <li>Committed to writing clean, maintainable, and performance-optimized code.</li>
-</ul>
-
+          <ul className="description-list">
+            <li>
+              Proficient in debugging and resolving complex technical issues
+              efficiently.
+            </li>
+            <li>
+              Experienced Vue.js & React.js front-end developer with a strong
+              focus on user-centric design.
+            </li>
+            <li>
+              Deep understanding of advanced JavaScript concepts and modern
+              development practices.
+            </li>
+            <li>
+              Committed to writing clean, maintainable, and
+              performance-optimized code.
+            </li>
+          </ul>
         </div>
       </section>
       <section>
         <div className="image-container">
-        <img src={me} alt="Saurabh" />
+          <img src={me} alt="Saurabh" />
         </div>
       </section>
       <BsChevronDown />

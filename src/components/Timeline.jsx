@@ -1,20 +1,20 @@
 import React from "react";
 import data from "../assets/data.json";
 
-const TimelineItem = ({heading,text,index,key}) => {
-    return(
-        <div
-        className={`timelineItem ${
-         index % 2 === 0 ? "leftTimeline" : "rightTimeline"
-        }`}
-      >
-     <div>
-     <h2>{heading}</h2>
+const TimelineItem = ({ heading, text, index }) => {
+  return (
+    <div
+      className={`timelineItem ${
+        index % 2 === 0 ? "leftTimeline" : "rightTimeline"
+      }`}
+    >
+      <div>
+        <h2>{heading}</h2>
         <p>{text}</p>
-     </div>
       </div>
-    )
-  };
+    </div>
+  );
+};
 
 const Timeline = () => {
   return (
@@ -32,6 +32,5 @@ const Timeline = () => {
     </div>
   );
 };
-
 
 export default Timeline;
