@@ -51,7 +51,7 @@ const useInView = (threshold = 0.1) => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => setInView(entry.isIntersecting),
-      { threshold }
+      { threshold },
     );
     if (ref.current) observer.observe(ref.current);
     return () => observer.disconnect();
@@ -120,7 +120,7 @@ const ParticleBackground = () => {
           0,
           p.x,
           p.y,
-          p.radius * 2
+          p.radius * 2,
         );
         gradient.addColorStop(0, "rgba(34, 211, 238, 0.8)");
         gradient.addColorStop(1, "rgba(168, 85, 247, 0.2)");
@@ -513,6 +513,12 @@ const About = () => {
       desc: "Advanced Full-stack Program",
       icon: Award,
     },
+    {
+      year: "2025",
+      title: "Product Engineer at Dronacharya",
+      desc: "Full-Stack EdTech Platform",
+      icon: Award,
+    },
   ];
 
   return (
@@ -607,8 +613,8 @@ const About = () => {
                       {stat.label.includes("K+")
                         ? "K+"
                         : stat.value === 4.5
-                        ? "+"
-                        : ""}
+                          ? "+"
+                          : ""}
                     </div>
                     <div className="text-sm text-gray-400 font-medium">
                       {stat.label}
@@ -773,6 +779,13 @@ const Experience = () => {
   const [ref, inView] = useInView();
 
   const achievements = [
+    "Developed a production-grade EdTech platform deployed on AWS (Lambda, S3, CloudFront) and Vercel, delivering mock tests, advanced performance analytics, current affairs content, and secure Razorpay payment integration, ensuring high performance, scalability, and reliability in a real-world production environment.",
+    "Built the platform using React.js and MUI on the frontend, with a serverless backend powered by Node.js, Express.js, and AWS Lambda (HTTP APIs), while leveraging MongoDB for scalable data persistence and AWS S3 for static asset storage.",
+    "Led end-to-end ownership of the full-stack EdTech platform, covering architecture, development, deployment, and ongoing enhancements, and worked directly with academy leadership to translate requirements into a production-ready, scalable product.",
+    "Enabled students to make data-backed academic decisions through structured analysis rather than raw scores. Delivered a production-ready EdTech solution used by real learners with live payments, real exam content, and continuous feature enhancements.",
+  ];
+
+  const achievements1 = [
     "Led the front-end development initiatives, mentoring junior developers and overseeing code reviews to ensure adherence to best practices and coding standards",
     "Architected complex state management workflows using Redux Toolkit (RTK) and Vue.js Composition API, improving component reusability and data flow efficiency",
     "Enhanced overall platform stability by proactively identifying and resolving critical production issues within tight deadlines",
@@ -780,7 +793,7 @@ const Experience = () => {
     "Collaborated closely with stakeholders to translate business requirements into robust technical implementations, resulting in improved customer satisfaction and user engagement metrics",
   ];
 
-  const achievements1 = [
+  const achievements2 = [
     "Designed, developed, and maintained key product features for a modern Food and Business Management Platform, connecting suppliers and restaurants to streamline inventory control, minimize waste, and facilitate regional trade",
     "Built and optimized interactive, data-driven user interfaces using React.js, Redux, and Vue.js (Composition API)",
     "Collaborated cross-functionally with product, design, and backend teams to deliver scalable and maintainable solutions aligned with business goals",
@@ -832,6 +845,73 @@ const Experience = () => {
                 <div className="flex flex-wrap justify-between items-start mb-6">
                   <div>
                     <h3 className="text-3xl font-black text-white mb-2">
+                      Product Engineer{" "}
+                    </h3>
+                    <p className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">
+                      Dronacharya Career Academy
+                    </p>
+                    <p className="text-gray-400 flex items-center space-x-2">
+                      <Globe size={16} />
+                      <span>Remote</span>
+                    </p>
+                  </div>
+                  <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 px-6 py-3 rounded-2xl border border-purple-500/30">
+                    <span className="text-purple-400 font-bold">
+                      April 2025 - December 2024
+                    </span>
+                  </div>
+                </div>
+
+                <div className="space-y-4 mb-8">
+                  {achievements.map((achievement, i) => (
+                    <div key={i} className="flex items-start space-x-4 group">
+                      <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 flex items-center justify-center group-hover:scale-125 transition-transform">
+                        <CheckCircle className="text-white" size={16} />
+                      </div>
+                      <p className="text-gray-300 leading-relaxed text-lg flex-1">
+                        {achievement}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="flex flex-wrap gap-3">
+                  {[
+                    "React",
+                    "material-UI",
+                    "JavaScript",
+                    "Vercel",
+                    "Node.js",
+                    "Express.js",
+                    "MongoDB",
+                    "AWS Serverless",
+                    "REST APIs",
+                    "Git",
+                    "AWS Lambda",
+                    "AWS S3",
+                    "AWS CloudFront",
+                  ].map((tech) => (
+                    <span
+                      key={tech}
+                      className="px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/30 text-cyan-400 font-semibold text-sm"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="max-w-5xl mx-auto mt-6">
+            <div className="relative p-10 rounded-3xl bg-gradient-to-br from-gray-900/80 to-black/80 backdrop-blur-xl border border-purple-500/30 hover:border-cyan-500/50 transition-all duration-500 hover:scale-105 shadow-2xl shadow-purple-500/20">
+              <div className="absolute -top-6 -right-6 w-32 h-32 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full blur-3xl opacity-50" />
+              <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full blur-3xl opacity-50" />
+
+              <div className="relative">
+                <div className="flex flex-wrap justify-between items-start mb-6">
+                  <div>
+                    <h3 className="text-3xl font-black text-white mb-2">
                       Senior Software Engineer
                     </h3>
                     <p className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">
@@ -844,13 +924,13 @@ const Experience = () => {
                   </div>
                   <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 px-6 py-3 rounded-2xl border border-purple-500/30">
                     <span className="text-purple-400 font-bold">
-                      March 2024 - Present
+                      March 2024 - December 2025
                     </span>
                   </div>
                 </div>
 
                 <div className="space-y-4 mb-8">
-                  {achievements.map((achievement, i) => (
+                  {achievements1.map((achievement, i) => (
                     <div key={i} className="flex items-start space-x-4 group">
                       <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 flex items-center justify-center group-hover:scale-125 transition-transform">
                         <CheckCircle className="text-white" size={16} />
@@ -906,13 +986,13 @@ const Experience = () => {
                   </div>
                   <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 px-6 py-3 rounded-2xl border border-purple-500/30">
                     <span className="text-purple-400 font-bold">
-                      August 2021 - March 2024
+                      July 2021 - March 2024
                     </span>
                   </div>
                 </div>
 
                 <div className="space-y-4 mb-8">
-                  {achievements1.map((achievement, i) => (
+                  {achievements2.map((achievement, i) => (
                     <div key={i} className="flex items-start space-x-4 group">
                       <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 flex items-center justify-center group-hover:scale-125 transition-transform">
                         <CheckCircle className="text-white" size={16} />
