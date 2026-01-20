@@ -856,7 +856,7 @@ const Experience = () => {
                   </div>
                   <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 px-6 py-3 rounded-2xl border border-purple-500/30">
                     <span className="text-purple-400 font-bold">
-                      April 2025 - December 2024
+                      April 2025 - December 2025
                     </span>
                   </div>
                 </div>
@@ -923,7 +923,7 @@ const Experience = () => {
                   </div>
                   <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 px-6 py-3 rounded-2xl border border-purple-500/30">
                     <span className="text-purple-400 font-bold">
-                      March 2024 - December 2025
+                      March 2024 - December 2024
                     </span>
                   </div>
                 </div>
