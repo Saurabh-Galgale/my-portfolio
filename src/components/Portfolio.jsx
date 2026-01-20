@@ -24,7 +24,6 @@ import Pestocert from "../assets/pesto1.png";
 import UltReactCert from "../assets/ultimateReactUdemy.png";
 import CmpltWebDevBootcamp from "../assets/udemyBootcamp.png";
 import MetaFECert from "../assets/metaBasic.png";
-import MetaBECert from "../assets/udemyBootcamp.png";
 import resumeDoc from "../assets/resume.pdf";
 
 const useTheme = () => {
