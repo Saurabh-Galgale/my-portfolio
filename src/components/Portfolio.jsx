@@ -24,7 +24,7 @@ import Pestocert from "../assets/pesto1.png";
 import UltReactCert from "../assets/ultimateReactUdemy.png";
 import CmpltWebDevBootcamp from "../assets/udemyBootcamp.png";
 import MetaFECert from "../assets/metaBasic.png";
-import resumeDoc from "../assets/resume.pdf";
+import resumeDoc from "../assets/resume_v1.pdf";
 
 const useTheme = () => {
   const [theme, setTheme] = useState("dark");
@@ -1036,6 +1036,16 @@ const Projects = () => {
 
   const projects = [
     {
+      title: "E-Commerce AI Assistant",
+      desc: "Developed an intelligent e-commerce platform featuring real-time conversational product discovery, leveraging the Groq AI API for rapid natural language processing, with a React frontend and a scalable Node.js/MongoDB backend.",
+      tech: ["Groq AI API", "React.js", "Node.js", "MongoDB"],
+      icon: "🤖",
+      gradient: "from-cyan-500 to-blue-500",
+      live: "https://ecommerce-ai-assistant.netlify.app",
+      github:
+        "https://github.com/Saurabh-Galgale/ecommerce-ai-assistant-chatbot-backend",
+    },
+    {
       title: "Vidya Voult",
       desc: "Built a full-stack educational platform using React.js, Node.js, Express.js, and MongoDB, enabling course uploads and interactive learning. Implemented JWT authentication and responsive UI",
       tech: ["React", "Node.js", "Express", "MongoDB", "JWT", "Tailwind CSS"],
@@ -1062,15 +1072,6 @@ const Projects = () => {
       live: "https://employee-management-org.vercel.app/",
       github:
         "https://github.com/Saurabh-Galgale/employee-management-nextjs-frontend",
-    },
-    {
-      title: "Personal Portfolio",
-      desc: "Built a responsive portfolio using React, JS, HTML, and Tailwind CSS with optimized components, reusable UI patterns, and mobile-first design",
-      tech: ["React", "JavaScript", "Tailwind CSS", "HTML", "CSS"],
-      icon: "🌐",
-      gradient: "from-cyan-500 to-blue-500",
-      live: "https://saurabhgalgale.vercel.app/",
-      github: "https://github.com/Saurabh-Galgale",
     },
   ];
 
